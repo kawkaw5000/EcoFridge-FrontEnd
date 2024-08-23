@@ -1,0 +1,51 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+.header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 76px;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search {
+  margin-left: 20px;
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 7px 60px 7px 14px;
+  border-radius: 15px;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  
+
+}
+
+.sidebar {
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 65px;
+  z-index: 100;
+}
+.margin {
+  position: absolute;
+  background-color: rgb(211, 211, 211);
+  top: 0;
+  left: 65px;
+  bottom: 0;
+  width: 5px;
+  z-index: 100;
+}
