@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoFridge Admin Panel</title>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"> 
+  <link rel="stylesheet" href="/styles/welcome-admin.css">
+  <link rel="stylesheet" href="styles/user-profiles.css">
+</head>
+<body>
+  <!-- HEADER SEARCHBAR-------------------------------------->
+ <header class="header">
+  <div class="search-bar">
+    <input type="text" class="search" placeholder="Search">
+    <div class="search-icon">
+      <img src="/header-icons/search-icon.svg" alt="" class="search-pic">
+    </div>
+  </div>
+  <div class="box">
+  </div>
+  <!--NOTIFICATION-->
+  <div class="notification-container">
+    <img src="/header-icons/notification-icon.svg" alt="" class="notification-icon">
+    <div class="notification-count">
+      3
+    </div>
+  </div>
+  <!--USER PROFILE ICON-->
+  <div class="profile-container">
+    <img src="/header-icons/channel-1.jpeg" alt="" class="profile-img">
+  </div>
+ </header>  
+ <!--SIDEBAR------------------------------------------------------------------>
+ <nav class="sidebar">
+  <div class="logo-container">
+    <img src="/sidbar-icons/Eco-logo.svg" alt="" class="logo-icon">
+  </div>
+  <div class="icon-container">
+    <img src="/sidbar-icons/home.svg" alt="" class="home-icon">
+  </div>
+  <div class="icon-container">
+    <img src="/sidbar-icons/storage.svg" alt="" class="storage-icon">
+  </div>
+  <div class="icon-container">
+    <img src="/sidbar-icons/subscription.svg" alt="" class="subscription-icon">
+  </div>
+  <div class="icon-container">
+    <img src="/sidbar-icons/reports.svg" alt="" class="report-icon">
+  </div>
+  <div class="margin"></div>
+ </nav>
+<!--MAIN---------------------------------------------------------->
+<main>
+  <div class="container">
+    <div class="dashboard">Dashboard</div>
+    <div class="flex-container">
+      <div class="welcome-container">
+        <div class="admin-welcome">
+          <div class="admin-name">Welcome Back, Mori!
+          </div>
+          <div class="check-updates">Check out new updates</div>
+          <div class="user-profile-btn-container">
+            <button class="user-profile-btn">
+              User Profiles
+            </button>
+          </div>
+        </div>
+        <div class="welcome-pic">
+          <img src="/dashboardImg/AdminImg.svg" alt="" class="welcome-img">
+        </div>
+      </div>
+    </div>
+<!--DASHBOARD USERLIST NAVIGATION SCREENNSS-->
+    <div class="user-container">
+      <div class="user-profiles">
+        User List Profiles 
+      </div>
+      <div class="category-btn-list-flex">
+          <div class="count-num">
+            <button class="count-btn"> 
+              All (9)
+            </button>
+          </div>
+          <div class="count-num">
+            <button class="count-btn">
+              Regular (4)
+            </button>
+          </div>       
+          <div class="count-num">
+            <button class="count-btn">
+              Food Business (1)
+            </button>
+          </div>
+          <div class="count-num">
+            <button class="count-btn">
+              Organization (3)
+            </button>
+          </div>
+          <div class="count-num">
+            <button class="count-btn">
+              Admin (1)
+            </button>
+          </div>    
+          <div class="add">
+            <button class="add-btn" id="add-btn">
+              <img src="/header-icons/plus-icon.svg" alt="" class="cross-icon">
+            </button>
+          </div>        
+      </div>   
+      <div class="dashboard-home-container">
+        <div class="user-profile-list-container">
+          <table class="user-list-table">
+            <thead>
+              <tr>
+                <th>
+                  <img src="/header-icons/down-arrow.svg" alt="" class="down-arrow-img">
+                </th>
+                <th>ID</th>
+                <th>Account-type</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <!--USER LIST------------->
+            <tbody>
+              <tr data-id="1" data-accounttype="donee organization" data-username="teamsnackers" data-email="teamsnackers@gmail.com">
+                <td>
+                  <button class="approved-btn">Approved</button>
+                </td>
+                <td>1</td>
+                <td>donee organization</td>
+                <td>teamsnackers</td>
+                <td>teamsnackers@gmail.com</td>
+                <td>
+                  <button class="action-btn">
+                    Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
+                  </button>
+                </td>
+              </tr> 
+              <tr data-id="2" data-accounttype="admin" data-username="lexeramorcillo13" data-email="lexeramorcillo13@gmail.com">
+                <td>
+                  <button class="pending-btn">Pending</button>
+                </td>
+                <td>2</td>
+                <td>admin</td>
+                <td>lexeramorcillo13</td>
+                <td>lexeramorcillo13@gmail.com</td>
+                <td>
+                  <button class="action-btn">
+                    Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
+                  </button>
+                </td>
+              </tr> 
+              <tr data-id="3" data-accounttype="regular" data-username="johndoe69" data-email="johndoe_69@gmail.com">
+                <td>
+                  <button class="reject-btn">Rejected</button>
+                </td>
+                <td>3</td>
+                <td>regular</td>
+                <td>johndoe69</td>
+                <td>johndoe_69@gmail.com</td>
+                <td>
+                  <button class="action-btn">
+                    Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div class="selected-profile-container">
+          <div class="user-column-container">
+            <div class="user-details-flex">
+              <div class="profile">
+                <img src="/header-icons/channel-1.jpeg" alt="" class="user-img">
+              </div>
+              <div class="column-user-info">
+                  <div class="details-info">First Name</div>
+                  <div class="details-info">Last Name</div>
+                  <div class="details-info">Gender</div>
+                  <div class="details-info">Birth Date</div>   
+              </div>
+              <div class="column-user-info">
+                <div class="user-details">
+                  <input type="text" id="userId" placeholder="">   
+                </div>
+                <div class="user-details">
+                  <div class="user-details">
+                    <input type="text" id="accountType" placeholder="">   
+                  </div>
+                </div>
+                <div class="user-details">
+                  <div class="user-details">
+                    <input type="text" id="username" placeholder="">   
+                  </div>
+                </div>
+                <div class="user-details">
+                  <div class="user-details">
+                    <input type="text" id="email" placeholder="">   
+                  </div>
+                </div>
+              </div>             
+            </div>
+            <div class="address-flex-row">
+              <div class="address">Address</div>
+              <div class="input-address-box">
+                <form>
+                  <textarea class="address-text">2nd Phase, Sta. Cruz, Liloan, Cebu</textarea>
+                </form>
+              </div>
+            </div> 
+            <div class="fridge-storage-container">
+              <div class="fridge">Fridge Items</div>
+              <div class="table-fridge">
+                <table class="fridge-items">
+                  <thead class="item-name">
+                    <tr class="fridge">
+                      <th class="item">Quantity</th>
+                      <th class="item">Serving</th>
+                      <th class="item">Item</th>
+                    </tr>
+                  </thead>
+                  <tbody class="fridge-list">
+                    <tr class="fridge-tr">
+                      <td class="fridge-td">5</td>
+                      <td class="fridge-td">1</td>
+                      <td class="fridge-td">Chicken</td>
+                    </tr>                      
+                  </tbody>
+                </table>
+              </div>
+            </div>          
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+  
+</main>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="create-acc">Create a account</div>
+    <div class="choose-acc">Choose account type</div>
+    <div class="account-content">
+      <button class="admin-btn">
+        Admin
+      </button>
+      <button class="regular-btn">Regular</button>
+      <button class="food-act-btn">
+        Food Business
+      </button>
+      <button>Organization</button>
+    </div>
+    <div class="close-btn-modal" id="closeModalBtn">
+      <button class="close-modal"><img src="/header-icons/close-btn.svg" alt="" class="close"></button>
+    </div>
+  </div>   
+</div>
+<script src="/js/selectuser.js"></script>
+<script src="/js/modal.js"></script>
+</body>
+</html>

@@ -10,3 +10,4 @@ function togglePasswordVisibility() {
     eyeIcon.src = "/LoginImg/eye-close-up-svgrepo-com.svg";
   }
 }
+
