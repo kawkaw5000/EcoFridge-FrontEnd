@@ -128,50 +128,70 @@
             <!--USER LIST------------->
             <tbody>
               <tr data-id="1" data-accounttype="donee organization" data-username="teamsnackers" data-email="teamsnackers@gmail.com">
-                <td>
-                  <button class="approved-btn">Approved</button>
-                </td>
-                <td>1</td>
-                <td>donee organization</td>
-                <td>teamsnackers</td>
-                <td>teamsnackers@gmail.com</td>
-                <td>
-                  <button class="action-btn">
-                    Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
-                  </button>
-                </td>
+                  <td>
+                      <button class="approved-btn">Approved</button>
+                  </td>
+                  <td>1</td>
+                  <td>donee organization</td>
+                  <td>teamsnackers</td>
+                  <td>teamsnackers@gmail.com</td>
+                  <td>
+                      <div class="dropdown">
+                          <button class="action-btn">
+                              Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
+                          </button>
+                          <div class="dropdown-content">
+                              <button class="dropdown-item">Edit</button>
+                              <button class="dropdown-item" id="del-btn">Delete</button>
+                          </div>
+                      </div>
+                  </td>
               </tr> 
               <tr data-id="2" data-accounttype="admin" data-username="lexeramorcillo13" data-email="lexeramorcillo13@gmail.com">
-                <td>
-                  <button class="pending-btn">Pending</button>
-                </td>
-                <td>2</td>
-                <td>admin</td>
-                <td>lexeramorcillo13</td>
-                <td>lexeramorcillo13@gmail.com</td>
-                <td>
-                  <button class="action-btn">
-                    Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
-                  </button>
-                </td>
+                  <td>
+                      <button class="pending-btn">Pending</button>
+                  </td>
+                  <td>2</td>
+                  <td>admin</td>
+                  <td>lexeramorcillo13</td>
+                  <td>lexeramorcillo13@gmail.com</td>
+                  <td>
+                      <div class="dropdown">
+                          <button class="action-btn">
+                              Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
+                          </button>
+                          <div class="dropdown-content">
+                              <button class="dropdown-item">Edit</button>
+                              <button class="dropdown-item" id="del-btn">Delete</button>
+                          </div>
+                      </div>
+                  </td>
               </tr> 
               <tr data-id="3" data-accounttype="regular" data-username="johndoe69" data-email="johndoe_69@gmail.com">
-                <td>
-                  <button class="reject-btn">Rejected</button>
-                </td>
-                <td>3</td>
-                <td>regular</td>
-                <td>johndoe69</td>
-                <td>johndoe_69@gmail.com</td>
-                <td>
-                  <button class="action-btn">
-                    Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
-                  </button>
-                </td>
+                  <td>
+                      <button class="reject-btn">Rejected</button>
+                  </td>
+                  <td>3</td>
+                  <td>regular</td>
+                  <td>johndoe69</td>
+                  <td>johndoe_69@gmail.com</td>
+                  <td>
+                      <div class="dropdown">
+                          <button class="action-btn">
+                              Actions <img src="/header-icons/down-arrow-white.svg" alt="" class="drop-arrw">
+                          </button>
+                          <div class="dropdown-content">
+                              <button class="dropdown-item">Edit</button>
+                              <button class="dropdown-item" id="del-btn">Delete</button>
+                          </div>
+                      </div>
+                  </td>
               </tr>
-            </tbody>
+          </tbody>       
           </table>
         </div>  
+        <div class="blank-profile-container">
+        </div>    
         <div class="selected-profile-container">
           <div class="user-column-container">
             <div class="user-details-flex">
@@ -186,21 +206,21 @@
               </div>
               <div class="column-user-info">
                 <div class="user-details">
-                  <input type="text" id="userId" placeholder="">   
+                  <input type="text" id="userId" placeholder="" readonly>   
                 </div>
                 <div class="user-details">
                   <div class="user-details">
-                    <input type="text" id="accountType" placeholder="">   
+                    <input type="text" id="accountType" placeholder="" readonly>   
                   </div>
                 </div>
                 <div class="user-details">
                   <div class="user-details">
-                    <input type="text" id="username" placeholder="">   
+                    <input type="text" id="username" placeholder="" readonly>   
                   </div>
                 </div>
                 <div class="user-details">
                   <div class="user-details">
-                    <input type="text" id="email" placeholder="">   
+                    <input type="text" id="email" placeholder="" readonly>   
                   </div>
                 </div>
               </div>             
@@ -209,7 +229,7 @@
               <div class="address">Address</div>
               <div class="input-address-box">
                 <form>
-                  <textarea class="address-text">2nd Phase, Sta. Cruz, Liloan, Cebu</textarea>
+                  <textarea class="address-text" readonly>2nd Phase, Sta. Cruz, Liloan, Cebu</textarea>
                 </form>
               </div>
             </div> 
@@ -236,30 +256,101 @@
             </div>          
           </div>
         </div>  
+        <div class="edit-profile-container" style="display: none;">
+          <div class="user-column-container">
+            <div class="user-details-flex">
+              <div class="profile">
+                <img src="/header-icons/channel-1.jpeg" alt="" class="user-img">
+              </div>
+              <div class="column-user-info">
+                <div class="details-info">First Name</div>
+                <div class="details-info">Last Name</div>
+                <div class="details-info">Gender</div>
+                <div class="details-info">Birth Date</div>
+              </div>
+              <div class="column-user-info">
+                <div class="user-details">
+                  <input type="text" id="editUserId">
+                </div>
+                <div class="user-details">
+                  <input type="text" id="editAccountType">
+                </div>
+                <div class="user-details">
+                  <input type="text" id="editUsername">
+                </div>
+                <div class="user-details">
+                  <input type="text" id="editEmail">
+                </div>
+              </div>
+            </div>
+            <div class="address-flex-row">
+              <div class="address">Address</div>
+              <div class="input-address-box">
+                <form>
+                  <textarea class="address-text">2nd Phase, Sta. Cruz, Liloan, Cebu</textarea>
+                </form>
+              </div>
+            </div>
+            <div class="fridge-storage-container">
+              <div class="fridge">Fridge Items</div>
+              <div class="table-fridge">
+                <table class="fridge-items">
+                  <thead class="item-name">
+                    <tr class="fridge">
+                      <th class="item">Quantity</th>
+                      <th class="item">Serving</th>
+                      <th class="item">Item</th>
+                    </tr>
+                  </thead>
+                  <tbody class="fridge-list">
+                    <tr class="fridge-tr">
+                      <td class="fridge-td">5</td>
+                      <td class="fridge-td">1</td>
+                      <td class="fridge-td">Chicken</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="save-edit">
+            <button class="save-edit-btn">Save</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  
+    <div id="deleteModal" class="del-modal">
+      <div class="del-modal-content">
+        <div class="modal-col">
+          <div class="modal-header">
+            <img src="/header-icons/trash-vec.svg" alt="" class="trash-vec">
+          </div>
+          <div class="top-mar">The selected user</div>
+          <div class="bottom-mar">will be deleted</div>
+            <button id="confirmDeleteBtn" class="delete-confirm-btn">OK</button>
+            <button id="cancelDeleteBtn" class="cancel-modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="create-acc">Create a account</div>
+        <div class="account-content">
+          <button class="admin-btn">
+            Admin
+          </button>
+          <button class="regular-btn">Regular</button>
+          <button class="food-act-btn">
+            Food Business
+          </button>
+          <button>Organization</button>
+        </div>
+        <div class="close-btn-modal" id="closeModalBtn">
+          <button class="close-modal"><img src="/header-icons/close-btn.svg" alt="" class="close"></button>
+        </div>
+      </div>   
+    </div>
 </main>
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <div class="create-acc">Create a account</div>
-    <div class="choose-acc">Choose account type</div>
-    <div class="account-content">
-      <button class="admin-btn">
-        Admin
-      </button>
-      <button class="regular-btn">Regular</button>
-      <button class="food-act-btn">
-        Food Business
-      </button>
-      <button>Organization</button>
-    </div>
-    <div class="close-btn-modal" id="closeModalBtn">
-      <button class="close-modal"><img src="/header-icons/close-btn.svg" alt="" class="close"></button>
-    </div>
-  </div>   
-</div>
 <script src="/js/selectuser.js"></script>
 <script src="/js/modal.js"></script>
 </body>
