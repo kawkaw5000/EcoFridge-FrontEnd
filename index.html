@@ -23,14 +23,21 @@
   </div>
   <!--NOTIFICATION-->
   <div class="notification-container">
-    <img src="/header-icons/notification-icon.svg" alt="" class="notification-icon">
-    <div class="notification-count">
-      3
-    </div>
+    <img src="/header-icons/notification-icon.svg" alt="" class="notification-icon" id="notificationIcon">
+  <div class="notification-count">3</div>
+  <!-- Notification Dropdown -->
+  <div class="notification-dropdown" id="notificationDropdown">
+    <p>No new notifications</p>
+  </div>
   </div>
   <!--USER PROFILE ICON-->
   <div class="profile-container">
-    <img src="/header-icons/channel-1.jpeg" alt="" class="profile-img">
+    <img src="/header-icons/channel-1.jpeg" alt="" class="profile-img" id="profileImg">
+  
+    <!-- Profile Dropdown -->
+    <div class="profile-dropdown" id="profileDropdown">
+        <button class="logout-btn"><img src="/header-icons/logout-icon.svg" alt="" class="logout-img">Logout</button>
+    </div>
   </div>
  </header>  
  <!--SIDEBAR------------------------------------------------------------------>
@@ -190,8 +197,12 @@
           </tbody>       
           </table>
         </div>  
+
+        <!--BLANK CONTAINER-->
         <div class="blank-profile-container">
-        </div>    
+        </div> 
+        
+        <!--SELECTED REGULAR ACCOUNT TYPE-->
         <div class="selected-profile-container">
           <div class="user-column-container">
             <div class="user-details-flex">
@@ -256,6 +267,8 @@
             </div>          
           </div>
         </div>  
+
+        <!--EDITED REGULAR ACCOUNT TYPE-->
         <div class="edit-profile-container" style="display: none;">
           <div class="user-column-container">
             <div class="user-details-flex">
@@ -317,8 +330,136 @@
             <button class="save-edit-btn">Save</button>
           </div>
         </div>
+
+        <!--SELECT ORG ACCOUNT TYPE-->
+        <div class="select-org-user-container">
+          <div class="user-column-container">
+            <div class="user-details-flex">
+              <div class="profile">
+                <img src="/org-img/org-img-sample.svg" alt="" class="user-img">
+              </div>
+              <div class="column-user-info">
+                  <div class="details-info">Organization</div>
+                  <div class="details-info">Address</div> 
+              </div>
+              <div class="column-user-info">
+                <div class="user-details">
+                  <input type="text" id="OrguserId" placeholder="" readonly>   
+                </div>
+                <div class="user-details">
+                  <div class="user-details">
+                    <input type="text" id="OrgaccountType" placeholder="" readonly>   
+                  </div>
+              </div> 
+            </div>       
+          </div> 
+          <div class="org-flex">
+            <p>Fridge Items</p>
+            <div class="Orgfridge-storage-container">
+                <div class="table-fridge">
+                  <table class="fridge-items">
+                    <thead class="item-name">
+                      <tr class="fridge">
+                        <th class="item">Quantity</th>
+                        <th class="item">Serving</th>
+                        <th class="item">Item</th>
+                      </tr>
+                    </thead>
+                    <tbody class="fridge-list">
+                      <tr class="fridge-tr">
+                        <td class="fridge-td">5</td>
+                        <td class="fridge-td">1</td>
+                        <td class="fridge-td">Chicken</td>
+                      </tr>                      
+                    </tbody>
+                </table>
+              </div>
+            </div>   
+        </div> 
+          <div class="org-flex">
+            <p>Documents</p>
+            <div class="org-docs-container">
+              <img src="/org-img/org-docx-sample.svg" alt="" class="org-docx">
+            </div>   
+          </div>         
+        </div>     
+        </div>
+        <!--EDITED ORG ACCOUNT TYPE-->
+        <div class="edit-org-user-container">
+          <div class="user-column-container">
+            <div class="user-details-flex">
+              <div class="profile">
+                <img src="/org-img/org-img-sample.svg" alt="" class="user-img">
+              </div>
+              <div class="column-user-info">
+                  <div class="details-info">Organization</div>
+                  <div class="details-info">Address</div> 
+              </div>
+              <div class="column-user-info">
+                <div class="user-details">
+                  <input type="text" id="editOrgId" placeholder="">   
+                </div>
+                <div class="user-details">
+                  <div class="user-details">
+                    <input type="text" id="editOrgAccountType" placeholder="">   
+                  </div>
+              </div> 
+            </div>       
+          </div> 
+          <div class="org-flex">
+            <p>Fridge Items</p>
+            <div class="Orgfridge-storage-container">
+                <div class="table-fridge">
+                  <table class="fridge-items">
+                    <thead class="item-name">
+                      <tr class="fridge">
+                        <th class="item">Quantity</th>
+                        <th class="item">Serving</th>
+                        <th class="item">Item</th>
+                      </tr>
+                    </thead>
+                    <tbody class="fridge-list">
+                      <tr class="fridge-tr">
+                        <td class="fridge-td">5</td>
+                        <td class="fridge-td">1</td>
+                        <td class="fridge-td">Chicken</td>
+                      </tr>                      
+                    </tbody>
+                </table>
+              </div>
+            </div>   
+          </div> 
+
+
+          <div class="org-flex">
+            <p>Documents</p>
+            <div class="org-docs-container">
+              <img src="/org-img/org-docx-sample.svg" alt="" class="org-docx">
+            </div>   
+          </div>         
+          </div>   
+          <div class="action-org-btn">
+            <button class="Orgaction-btn">
+                Actions <img src="/org-img/up-arrow (1).png" alt="" class="Orgdrop-arrw">
+            </button>
+            <div class="dropdown-menu">
+                <button id="approve-btn">Approve</button>
+                <button id="reject-btn">Reject</button>
+            </div>
+        </div>
+          </div>
+          <div id="org-modal" class="org-modal">
+            <div class="org-modal-content">
+                <p id="modal-message"></p>
+                <button id="close-modal">Close</button>
+            </div>
+        </div>
+        </div>
+        
       </div>
     </div>
+
+    <!---MODALlllllldsdsdssd-->
     <div id="deleteModal" class="del-modal">
       <div class="del-modal-content">
         <div class="modal-col">
@@ -327,7 +468,7 @@
           </div>
           <div class="top-mar">The selected user</div>
           <div class="bottom-mar">will be deleted</div>
-            <button id="confirmDeleteBtn" class="delete-confirm-btn">OK</button>
+            <button id="confirmDeleteBtn" class="delete-confirm-btn">Confirm</button>
             <button id="cancelDeleteBtn" class="cancel-modal">Cancel</button>
         </div>
       </div>
@@ -353,5 +494,7 @@
 </main>
 <script src="/js/selectuser.js"></script>
 <script src="/js/modal.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/approveModal.js"></script>
 </body>
 </html>

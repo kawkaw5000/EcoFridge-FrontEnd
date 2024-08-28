@@ -164,7 +164,6 @@
   border-radius: 7px;
   margin-left: 15px;
   float: right;
-  
 }
 
 .blank-profile-container {
@@ -528,7 +527,7 @@ tr:hover {
 }
 
 .dropdown-content .dropdown-item:hover {
-  background-color: #f1f1f1;
+  background-color: #81f7c0;
 }
 
 .action-btn {
@@ -623,4 +622,170 @@ tr:hover {
 
 .modal-col button:active {
   background-color: #ddeedb;
+}
+
+.select-org-user-container {
+  height: 400px;
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+  margin-right: 11px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.185);
+  border-radius: 7px;
+  margin-left: 15px;
+  float: right;
+}
+
+.row-org-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.org-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 8px;
+}
+
+.org-flex p {
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+
+.Orgfridge-storage-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+.Orgtable-fridge {
+  height: 150px;
+  width: 280px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(128, 128, 128, 0.212);
+  margin-left: 10px;
+  border-radius: 15px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.org-docs-container {
+  height: 100px;
+  width: 110px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(128, 128, 128, 0.212);
+  margin-left: 15px;
+  border-radius: 15px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+
+.edit-org-user-container {
+  height: 400px;
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+  margin-right: 11px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.185);
+  border-radius: 7px;
+  margin-left: 15px;
+  float: right;
+  position: relative;
+}
+
+.action-org-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.Orgaction-btn {
+  background-color: #307A59;
+  border:none ;
+  color: white;
+  padding: 7px 13px 7px 13px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Orgaction-btn:hover {
+  background-color: #3e8e41;
+  box-shadow: 0px 1px 5px rgba(110, 110, 110, 0.562);
+}
+
+.Orgaction-btn:active {
+  background-color: #74c777;
+  box-shadow: 0px 1px 5px rgba(110, 110, 110, 0.562);
+}
+
+.Orgdrop-arrw {
+  height: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: -80px;
+  background-color: white;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.356);
+  border-radius: 7px;
+  margin-top: 5px;
+  z-index: 100;
+}
+
+.dropdown-menu button {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-menu button:hover {
+  background-color: #81f7c0;
+}
+
+.org-modal {
+  display: none;
+  position: fixed;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.org-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.org-modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
 }
