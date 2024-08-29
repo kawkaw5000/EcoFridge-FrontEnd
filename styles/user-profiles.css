@@ -471,11 +471,28 @@ tr:hover {
   background-color: #8ec9ae;
 }
 
-.close-modal {
+.org-close-modal-btn {
   border: none;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   padding: 2px 6px;
   border-radius: 100px;
+  color: black;
+  font-weight: bold;
+  width: 100px;
+  height: 30px;
+}
+
+.org-close-modal-btn:hover {
+  background-color: #57e777;
+}
+
+.org-close-modal-btn:active {
+  background-color: #cdf3d5a8;
+}
+
+.org-style {
+  height: 60px;
+  width: 60px;
 }
 
 .close-modal:active {
@@ -778,10 +795,11 @@ tr:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: #307A59;;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  color: white;
 }
 
 .org-modal-content p {
@@ -789,3 +807,5 @@ tr:hover {
   font-size: 16px;
   font-weight: bold;
 }
+
+
